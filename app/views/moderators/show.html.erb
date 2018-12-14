@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @moderator.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @moderator.email %>
+</p>
+
+<%= link_to 'Edit', edit_moderator_path(@moderator) %> |
+<%= link_to 'Back', moderators_path %>

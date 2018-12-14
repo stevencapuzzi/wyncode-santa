@@ -1,0 +1,46 @@
+<section id="banner" class="major">
+  <div class="inner">
+    <header class="major">
+      <h1>Hi, Wyncode</h1>
+    </header>
+    <div class="content">
+      <p>Let's play a Secret Santa.</p>
+      <ul class="actions">
+       <li><%= link_to 'Add a new participant', new_user_path, class: "button next scrolly" %></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Participants @ Wyncode C-30</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+       <th>Wish-List</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.wishlist %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<ul class="actions">
+<li><%= link_to 'Play Secret Santa and send E-mails!', 'users/sorting_hat', class: "button next scrolly" %></li>
+</ul>

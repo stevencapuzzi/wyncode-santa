@@ -1,0 +1,8 @@
+<h1>Vamos a jugar Secret Santa</h1>
+<ul>
+<% @sorting.each do |user| %>
+<li><%= user.name + " => " +user.secret %> </li>
+<% end %>
+</ul>
+<hr />
+

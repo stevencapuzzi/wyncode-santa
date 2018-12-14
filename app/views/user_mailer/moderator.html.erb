@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body style="background-color:white;">
+    <h1 style="color:red;">Hello, <%= @name %></h1>
+    <p style="color:green;">
+     Thanks for checking this Secret Santa list @ Wyncode!
+     This is it, If you see something wrong please slack me (Steven).
+    </p>
+    <hr />
+
+    <ul>
+    <% @secret_list.each do |user| %>
+    <li><%= user.name + " => " + user.secret %> </li>
+    <% end %>
+    </ul>
+   
+    <p>Thanks for your help! </p>
+  </body>
+</html>
