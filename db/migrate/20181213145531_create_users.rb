@@ -7,6 +7,5 @@ class CreateUsers < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    :email, unique: true
   end
 end
